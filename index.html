@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strata Resources — Bulk Fill Specialists</title>
+<meta name="description" content="Certified bulk fill for UK construction sites. No Environmental Permit required. Significantly cheaper than primary aggregate. Full CL:AIRE documentation included.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:#111827;background:#fff;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+:root{
+  --green-dark:#1a3a2a;
+  --green-mid:#2d6a4f;
+  --green-light:#52b788;
+  --green-pale:#f0fdf4;
+  --green-border:#bbf7d0;
+  --grey-50:#f9fafb;
+  --grey-200:#e5e7eb;
+  --grey-500:#6b7280;
+  --grey-700:#374151;
+  --grey-900:#111827;
+}
+
+.bg-shapes{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.bg-shapes svg{position:absolute}
+
+/* ── Nav ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--grey-200);
+  padding:0 5%;height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.logo{font-weight:800;font-size:1.1rem;color:var(--green-dark);letter-spacing:-.3px;text-decoration:none}
+.logo span{color:var(--green-light);font-weight:400}
+nav a.btn-nav{
+  background:var(--green-dark);color:#fff;
+  padding:9px 20px;border-radius:6px;
+  font-size:.85rem;font-weight:600;text-decoration:none;letter-spacing:.2px;
+  transition:background .15s;
+}
+nav a.btn-nav:hover{background:var(--green-mid)}
+
+/* ── Hero ── */
+#hero{
+  padding:96px 5% 80px;
+  background:linear-gradient(160deg,var(--green-pale) 0%,#fff 55%);
+  border-bottom:1px solid var(--green-border);
+  position:relative;overflow:hidden;
+}
+.hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1}
+.eyebrow{
+  display:inline-block;background:var(--green-dark);color:#fff;
+  font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  padding:4px 12px;border-radius:20px;margin-bottom:24px;
+}
+#hero h1{
+  font-size:clamp(2rem,5vw,3.2rem);font-weight:800;
+  line-height:1.15;letter-spacing:-.5px;color:var(--green-dark);margin-bottom:20px;
+}
+#hero h1 em{
+  font-style:normal;
+  background:linear-gradient(135deg,var(--green-mid),var(--green-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+#hero p{font-size:1.1rem;color:var(--grey-700);max-width:580px;margin-bottom:36px;line-height:1.7}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{
+  background:var(--green-dark);color:#fff;padding:14px 28px;border-radius:7px;
+  font-size:.9rem;font-weight:700;letter-spacing:.2px;text-decoration:none;display:inline-block;
+  transition:background .15s,transform .1s;
+}
+.btn-primary:hover{background:var(--green-mid);transform:translateY(-1px)}
+.btn-secondary{
+  background:#fff;color:var(--green-dark);border:2px solid var(--green-dark);
+  padding:12px 28px;border-radius:7px;
+  font-size:.9rem;font-weight:700;letter-spacing:.2px;text-decoration:none;display:inline-block;
+  transition:all .15s;
+}
+.btn-secondary:hover{background:var(--green-pale)}
+
+/* ── Trust bar ── */
+#trust{
+  padding:32px 5%;background:var(--green-dark);
+  display:flex;flex-wrap:wrap;justify-content:center;gap:40px;
+  position:relative;overflow:hidden;
+}
+.trust-item{text-align:center;color:#fff;position:relative;z-index:1}
+.trust-item strong{display:block;font-size:1.6rem;font-weight:800;color:var(--green-light)}
+.trust-item span{font-size:.78rem;opacity:.75;letter-spacing:.3px;text-transform:uppercase}
+
+/* ── Sections ── */
+section{padding:80px 5%;position:relative;overflow:hidden}
+.section-inner{max-width:1060px;margin:0 auto;position:relative;z-index:1}
+.section-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--green-mid);margin-bottom:12px}
+.section-title{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;color:var(--green-dark);letter-spacing:-.3px;margin-bottom:16px}
+.section-sub{font-size:1rem;color:var(--grey-500);max-width:560px;line-height:1.7}
+
+/* ── Receiver section ── */
+#receivers{background:#fff}
+.receiver-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:start}
+.receiver-benefits{display:flex;flex-direction:column;gap:20px}
+.benefit-item{
+  display:flex;gap:18px;align-items:flex-start;
+  padding:20px 22px;border-radius:10px;
+  background:var(--grey-50);border:1px solid var(--grey-200);
+}
+.benefit-icon{
+  width:40px;height:40px;border-radius:8px;flex-shrink:0;
+  background:var(--green-dark);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;
+}
+.benefit-text strong{display:block;font-size:.95rem;font-weight:700;color:var(--green-dark);margin-bottom:3px}
+.benefit-text p{font-size:.83rem;color:var(--grey-500);line-height:1.6;margin:0}
+.receiver-cost-panel{
+  background:var(--green-dark);border-radius:12px;padding:32px;
+  position:sticky;top:80px;
+}
+.cost-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.cost-row:last-of-type{border-bottom:none}
+.cost-label{font-size:.82rem;color:rgba(255,255,255,.6)}
+.cost-value{font-size:1rem;font-weight:700;color:#fff}
+.cost-value.saving{color:var(--green-light)}
+.cost-divider{
+  margin:16px 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);
+  font-size:.75rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px;
+}
+
+/* ── How it works ── */
+#how{background:var(--grey-50);border-top:1px solid var(--grey-200);border-bottom:1px solid var(--grey-200)}
+.steps{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:0;margin-top:48px;
+  border:1px solid var(--grey-200);border-radius:12px;overflow:hidden;background:#fff;
+}
+.step{padding:32px 28px;border-right:1px solid var(--grey-200);position:relative}
+.step:last-child{border-right:none}
+.step-num{
+  width:36px;height:36px;border-radius:50%;background:var(--green-dark);color:#fff;
+  font-size:.85rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;flex-shrink:0;
+}
+.step h3{font-size:1rem;font-weight:700;color:var(--green-dark);margin-bottom:8px}
+.step p{font-size:.85rem;color:var(--grey-500);line-height:1.6}
+.step-arrow{
+  position:absolute;right:-14px;top:50%;transform:translateY(-50%);
+  width:28px;height:28px;background:#fff;border:1px solid var(--grey-200);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;z-index:1;font-size:.8rem;color:var(--grey-500);
+}
+
+/* ── Compliance ── */
+#compliance{border-top:1px solid var(--grey-200)}
+.compliance-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.compliance-text h2{font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:800;color:var(--green-dark);letter-spacing:-.2px;margin-bottom:16px}
+.compliance-text p{font-size:.9rem;color:var(--grey-500);line-height:1.7;margin-bottom:12px}
+.compliance-badges{display:flex;flex-direction:column;gap:14px}
+.comp-badge{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px 18px;background:var(--grey-50);border:1px solid var(--grey-200);border-radius:8px;
+}
+.comp-badge-icon{
+  width:36px;height:36px;border-radius:8px;background:var(--green-dark);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;flex-shrink:0;
+}
+.comp-badge-text strong{display:block;font-size:.85rem;font-weight:700;color:var(--grey-900);margin-bottom:2px}
+.comp-badge-text span{font-size:.78rem;color:var(--grey-500)}
+
+/* ── Producers (secondary) ── */
+#producers{background:var(--grey-50);border-top:1px solid var(--grey-200);border-bottom:1px solid var(--grey-200)}
+.producer-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:40px}
+.producer-stats{display:flex;flex-direction:column;gap:12px}
+.stat-row{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 18px;background:#fff;border:1px solid var(--grey-200);border-radius:8px;
+}
+.stat-icon{font-size:1.2rem;flex-shrink:0;width:32px;text-align:center}
+.stat-text{font-size:.85rem;color:var(--grey-700);line-height:1.5}
+.stat-text strong{color:var(--green-dark)}
+
+/* ── Why Strata ── */
+#why{background:var(--green-pale);border-top:1px solid var(--green-border);border-bottom:1px solid var(--green-border)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:40px}
+.why-item{background:#fff;border-radius:10px;padding:24px;border:1px solid var(--grey-200)}
+.why-icon{font-size:1.4rem;margin-bottom:12px}
+.why-item h4{font-size:.95rem;font-weight:700;color:var(--green-dark);margin-bottom:6px}
+.why-item p{font-size:.82rem;color:var(--grey-500);line-height:1.6}
+
+/* ── Contact ── */
+#contact{background:var(--green-dark)}
+#contact .section-label{color:var(--green-light)}
+#contact .section-title{color:#fff}
+#contact .section-sub{color:rgba(255,255,255,.65)}
+.contact-personal{display:grid;grid-template-columns:auto 1fr 1fr;gap:40px;margin-top:40px;align-items:start}
+.contact-photo-block{display:flex;align-items:center;gap:20px;position:relative;z-index:1}
+.contact-photo-placeholder{
+  width:100px;height:100px;border-radius:50%;flex-shrink:0;
+  background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.75rem;color:rgba(255,255,255,.3);letter-spacing:.5px;text-transform:uppercase;
+}
+.contact-personal-text strong{display:block;font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:3px}
+.contact-personal-text span{display:block;font-size:.83rem;color:rgba(255,255,255,.55)}
+.contact-details-block{position:relative;z-index:1}
+.contact-detail{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.contact-detail-icon{
+  width:38px;height:38px;border-radius:8px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;
+}
+.contact-detail-text strong{display:block;font-size:.8rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.4px;margin-bottom:1px}
+.contact-detail-text a,.contact-detail-text span{font-size:.9rem;color:#fff;text-decoration:none;font-weight:500}
+.contact-detail-text a:hover{color:var(--green-light)}
+.contact-prompt{
+  padding:22px;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);border-radius:10px;position:relative;z-index:1;
+}
+
+/* ── WhatsApp bubble ── */
+.whatsapp-bubble{
+  position:fixed;bottom:24px;right:24px;z-index:200;
+  width:56px;height:56px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 16px rgba(37,211,102,.45);
+  text-decoration:none;transition:transform .15s,box-shadow .15s;
+}
+.whatsapp-bubble:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(37,211,102,.55)}
+
+/* ── Footer ── */
+footer{
+  background:#0f2419;padding:24px 5%;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  position:relative;overflow:hidden;
+}
+footer .logo{color:rgba(255,255,255,.8);font-size:.9rem;position:relative;z-index:1}
+footer .logo span{color:rgba(255,255,255,.4)}
+footer p{font-size:.75rem;color:rgba(255,255,255,.35);position:relative;z-index:1}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .contact-personal{grid-template-columns:1fr;gap:28px}
+  .receiver-grid{grid-template-columns:1fr}
+  .receiver-cost-panel{position:static}
+  .producer-inner{grid-template-columns:1fr}
+  .compliance-inner{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  #hero{padding:64px 5% 56px}
+  .steps{grid-template-columns:1fr}
+  .step{border-right:none;border-bottom:1px solid var(--grey-200)}
+  .step:last-child{border-bottom:none}
+  .step-arrow{display:none}
+  #trust{gap:24px}
+  footer{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav>
+  <a href="#" class="logo">Strata Resources <span>Ltd</span></a>
+  <a href="#contact" class="btn-nav">Get in touch</a>
+</nav>
+
+<!-- ── Hero ── -->
+<section id="hero">
+  <div class="bg-shapes">
+    <svg style="top:-80px;right:-55px;width:300px;height:300px;opacity:.14;transform:rotate(12deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,3 97,26 97,74 50,97 3,74 3,26" stroke="#1a3a2a" stroke-width="1.5"/>
+    </svg>
+    <svg style="top:20px;right:160px;width:150px;height:150px;opacity:.15;transform:rotate(-7deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 95,88 5,88" stroke="#52b788" stroke-width="1.8"/>
+    </svg>
+    <svg style="top:42%;right:8%;width:68px;height:68px;opacity:.16;transform:rotate(6deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="#1a3a2a" stroke-width="2.5"/>
+    </svg>
+    <svg style="bottom:38px;left:3%;width:88px;height:34px;opacity:.13" viewBox="0 0 88 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="5" x2="88" y2="5" stroke="#2d6a4f" stroke-width="2"/>
+      <line x1="8" y1="17" x2="80" y2="17" stroke="#2d6a4f" stroke-width="2"/>
+      <line x1="18" y1="29" x2="70" y2="29" stroke="#2d6a4f" stroke-width="2"/>
+    </svg>
+    <svg style="top:28%;left:30%;width:44px;height:44px;opacity:.10" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 95,88 5,88" fill="#52b788"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow">Bulk fill for UK construction sites</span>
+    <h1>Certified fill material.<br><em>No permit. Full documentation.</em></h1>
+    <p>Bulk fill placed as a certified by-product under the CL:AIRE DoW CoP. No Environmental Permit required at your site, significantly cheaper than primary aggregate, and every delivery comes with full compliance documentation.</p>
+    <div class="hero-ctas">
+      <a href="#receivers" class="btn-primary">I need fill material</a>
+      <a href="#producers" class="btn-secondary">I produce material</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Trust bar ── -->
+<div id="trust">
+  <div class="bg-shapes">
+    <svg style="top:-55px;right:7%;width:200px;height:200px;opacity:.12;transform:rotate(15deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,3 97,26 97,74 50,97 3,74 3,26" stroke="white" stroke-width="1.5"/>
+    </svg>
+    <svg style="bottom:-18px;left:11%;width:72px;height:72px;opacity:.13;transform:rotate(-5deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 95,88 5,88" stroke="white" stroke-width="2"/>
+    </svg>
+    <svg style="top:50%;left:42%;width:38px;height:38px;opacity:.11;transform:rotate(10deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="white" stroke-width="2.5"/>
+    </svg>
+  </div>
+  <div class="trust-item">
+    <strong>Zero</strong>
+    <span>Permit required at your site</span>
+  </div>
+  <div class="trust-item">
+    <strong>£5–12/t</strong>
+    <span>vs £18–35/t primary aggregate</span>
+  </div>
+  <div class="trust-item">
+    <strong>CL:AIRE</strong>
+    <span>Full DoW CoP documentation</span>
+  </div>
+  <div class="trust-item">
+    <strong>UK-wide</strong>
+    <span>England &amp; Wales</span>
+  </div>
+</div>
+
+<!-- ── For receivers ── -->
+<section id="receivers">
+  <div class="bg-shapes">
+    <svg style="top:-45px;right:-40px;width:260px;height:260px;opacity:.09;transform:rotate(10deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,3 97,26 97,74 50,97 3,74 3,26" stroke="#1a3a2a" stroke-width="1.5"/>
+    </svg>
+    <svg style="bottom:30px;left:2%;width:110px;height:110px;opacity:.09;transform:rotate(5deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 95,88 5,88" stroke="#52b788" stroke-width="1.8"/>
+    </svg>
+    <svg style="top:38%;right:3%;width:55px;height:55px;opacity:.12;transform:rotate(18deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="#1a3a2a" stroke-width="2.5"/>
+    </svg>
+    <svg style="top:20px;left:5%;width:70px;height:28px;opacity:.09" viewBox="0 0 70 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="4" x2="70" y2="4" stroke="#2d6a4f" stroke-width="2"/>
+      <line x1="6" y1="14" x2="64" y2="14" stroke="#2d6a4f" stroke-width="2"/>
+      <line x1="14" y1="24" x2="56" y2="24" stroke="#2d6a4f" stroke-width="2"/>
+    </svg>
+  </div>
+  <div class="section-inner">
+    <p class="section-label">For groundworks &amp; developers</p>
+    <h2 class="section-title">Cheaper fill. No permit headache.<br>Your compliance covered.</h2>
+    <p class="section-sub">We supply certified bulk fill material to construction sites across England and Wales. Placed as a by-product, not waste, which means no Environmental Permit required at your site and no permit application queue.</p>
+    <div class="receiver-grid">
+      <div class="receiver-benefits">
+        <div class="benefit-item">
+          <div class="benefit-icon">EP</div>
+          <div class="benefit-text">
+            <strong>No Environmental Permit required</strong>
+            <p>Material placed as a certified by-product is not legally classified as waste at your site. No permit application, no 1–2 year queue, no EA process to manage.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">£</div>
+          <div class="benefit-text">
+            <strong>Significantly cheaper than primary aggregate</strong>
+            <p>Primary aggregate fill typically costs £18–35/t delivered. Our certified fill material is placed at £5–12/t, with no reduction in quality for bulk fill applications.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">CL</div>
+          <div class="benefit-text">
+            <strong>Full documentation provided</strong>
+            <p>Every delivery is documented under the CL:AIRE Definition of Waste Code of Practice. You receive the completed Materials Management Plan. Your compliance record is covered.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">✓</div>
+          <div class="benefit-text">
+            <strong>Material tested and spec confirmed</strong>
+            <p>Classification, testing and specification are confirmed before placement. You know exactly what material is coming and it arrives to spec.</p>
+          </div>
+        </div>
+      </div>
+      <div class="receiver-cost-panel">
+        <p style="font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--green-light);margin-bottom:16px">Typical cost comparison</p>
+        <div class="cost-divider">Primary aggregate fill</div>
+        <div class="cost-row">
+          <span class="cost-label">Type 1 MOT / primary agg.</span>
+          <span class="cost-value">£18–35/t</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Recycled aggregate fill</span>
+          <span class="cost-value">£8–15/t</span>
+        </div>
+        <div class="cost-divider" style="margin-top:20px">By-product fill via Strata</div>
+        <div class="cost-row">
+          <span class="cost-label">Certified by-product fill</span>
+          <span class="cost-value saving">£5–12/t</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">Environmental Permit</span>
+          <span class="cost-value saving">Not required</span>
+        </div>
+        <div class="cost-row">
+          <span class="cost-label">CL:AIRE documentation</span>
+          <span class="cost-value saving">Included</span>
+        </div>
+        <p style="font-size:.72rem;color:rgba(255,255,255,.35);margin-top:18px;line-height:1.6">Prices indicative. Varies by material classification, volume and haulage distance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── How it works ── -->
+<section id="how">
+  <div class="bg-shapes">
+    <svg style="top:-45px;right:4%;width:215px;height:215px;opacity:.10;transform:rotate(8deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,3 97,26 97,74 50,97 3,74 3,26" stroke="#1a3a2a" stroke-width="1.5"/>
+    </svg>
+    <svg style="bottom:-12px;left:2%;width:98px;height:98px;opacity:.10;transform:rotate(4deg)" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 95,88 5,88" fill="#52b788"/>
+    </svg>
+    <svg style="top:56%;right:13%;width:50px;height:50px;opacity:.13;transform:rotate(12deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="#1a3a2a" stroke-width="2.5"/>
+    </svg>
+  </div>
+  <div class="section-inner">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title">Tell us what you need. We handle the rest.</h2>
+    <p class="section-sub">Volume, location, timescale, spec. That is all we need from you. Everything else, including sourcing, classification, documentation and haulage coordination, comes through us.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Tell us your requirement</h3>
+        <p>Volume, site location, fill spec and timescale. We assess whether the by-product route works for your project.</p>
+        <div class="step-arrow">→</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We source and classify</h3>
+        <p>We identify a qualifying producer and confirm the material meets by-product criteria under CL:AIRE DoW CoP. Not waste, no permit required.</p>
+        <div class="step-arrow">→</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Documentation prepared</h3>
+        <p>Full Materials Management Plan produced. Material test data confirmed. Your compliance record is ready before the first load arrives.</p>
+        <div class="step-arrow">→</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Fill delivered to site</h3>
+        <p>Material arrives clean, tested and documented. Haulage coordinated. You get the fill you need at the price agreed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Compliance ── -->
+<section id="compliance">
+  <div class="bg-shapes">
+    <svg style="bottom:-42px;right:3%;width:182px;height:182px;opacity:.10;transform:rotate(22deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,3 97,26 97,74 50,97 3,74 3,26" stroke="#1a3a2a" stroke-width="1.5"/>
+    </svg>
+    <svg style="top:18px;left:1%;width:70px;height:70px;opacity:.11" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 95,88 5,88" fill="#52b788"/>
+    </svg>
+    <svg style="top:36%;right:27%;width:48px;height:48px;opacity:.13;transform:rotate(15deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="#1a3a2a" stroke-width="2.5"/>
+    </svg>
+  </div>
+  <div class="section-inner">
+    <div class="compliance-inner">
+      <div class="compliance-text">
+        <p class="section-label">Compliance</p>
+        <h2>No Environmental Permit required at your site.</h2>
+        <p>When fill material is placed as a certified by-product rather than waste, the receiving site needs no Environmental Permit. That is the central advantage of every deal we place.</p>
+        <p>The framework that makes this possible is the <a href="https://claire.co.uk/projects-and-initiatives/dow-cop" target="_blank" rel="noopener" style="color:var(--green-mid);font-weight:600">CL:AIRE Definition of Waste Code of Practice (DoW CoP)</a>, an EA-recognised process that formally confirms material is not legally classified as waste at the point of placement. Over 160 million cubic metres of material has been placed under this framework across the UK.</p>
+        <p>Every deal we place is fully documented under this framework. You receive the completed paperwork — your compliance record is covered.</p>
+      </div>
+      <div class="compliance-badges">
+        <div class="comp-badge">
+          <div class="comp-badge-icon">CL</div>
+          <div class="comp-badge-text">
+            <strong>CL:AIRE DoW CoP</strong>
+            <span>Definition of Waste Code of Practice, the EA-recognised framework for by-product classification in UK construction</span>
+          </div>
+        </div>
+        <div class="comp-badge">
+          <div class="comp-badge-icon">EA</div>
+          <div class="comp-badge-text">
+            <strong>Environment Agency aligned</strong>
+            <span>By-product route operates under Article 5 of the Waste Framework Directive, retained in UK law</span>
+          </div>
+        </div>
+        <div class="comp-badge">
+          <div class="comp-badge-icon">WM</div>
+          <div class="comp-badge-text">
+            <strong>WM3 classification</strong>
+            <span>Material assessed and classified in accordance with EA technical guidance WM3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── For producers ── -->
+<section id="producers">
+  <div class="bg-shapes">
+    <svg style="top:-50px;right:-35px;width:230px;height:230px;opacity:.09;transform:rotate(18deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,3 97,26 97,74 50,97 3,74 3,26" stroke="#1a3a2a" stroke-width="1.5"/>
+    </svg>
+    <svg style="bottom:-20px;left:-15px;width:110px;height:110px;opacity:.09" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 95,88 5,88" fill="#52b788"/>
+    </svg>
+    <svg style="top:40%;right:8%;width:52px;height:52px;opacity:.11;transform:rotate(20deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="20,5 80,8 95,55 70,92 30,88 5,48" stroke="#52b788" stroke-width="1.8"/>
+    </svg>
+  </div>
+  <div class="section-inner">
+    <p class="section-label">For quarries &amp; wash plants</p>
+    <h2 class="section-title">Cut your disposal costs.<br>Clear your stockpile.</h2>
+    <p class="section-sub">If your wash plant produces filter cake or surplus fines, we find it a home, reducing what you pay to get rid of it and freeing up valuable site space.</p>
+    <div class="producer-inner">
+      <div class="producer-stats">
+        <div class="stat-row">
+          <div class="stat-icon">💰</div>
+          <div class="stat-text"><strong>Non-hazardous landfill tax is £130.75/t from April 2026.</strong> The by-product route eliminates this cost entirely for qualifying material.</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-icon">📦</div>
+          <div class="stat-text"><strong>Stockpiling filter cake takes up land</strong> and can breach planning conditions. We clear it at a significantly lower cost than the landfill route.</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-icon">📋</div>
+          <div class="stat-text"><strong>We handle all by-product documentation</strong> and placement. Inert and non-hazardous streams both considered.</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-icon">🔄</div>
+          <div class="stat-text"><strong>Works alongside your existing arrangements.</strong> No disruption to current disposal routes while we get the first deal placed.</div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:.82rem;color:var(--grey-500);line-height:1.7;margin-bottom:20px">We work with quarries and C&amp;D wash plants producing filter cake, surplus fines and similar by-product streams. We assess your material, confirm classification, find a suitable receiver and handle the full documentation chain.</p>
+        <p style="font-size:.82rem;color:var(--grey-500);line-height:1.7;margin-bottom:28px">First conversation takes 10 minutes. We'll tell you whether your material qualifies and what the route looks like.</p>
+        <a href="#contact" class="btn-primary" style="font-size:.85rem;padding:12px 22px">Talk to us about your material</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Why Strata ── -->
+<section id="why">
+  <div class="bg-shapes">
+    <svg style="top:-82px;right:-58px;width:295px;height:295px;opacity:.14;transform:rotate(15deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,3 97,26 97,74 50,97 3,74 3,26" stroke="#1a3a2a" stroke-width="1.5"/>
+    </svg>
+    <svg style="bottom:-28px;left:-18px;width:124px;height:124px;opacity:.12" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 95,88 5,88" fill="#52b788"/>
+    </svg>
+    <svg style="top:48%;left:7%;width:82px;height:32px;opacity:.14" viewBox="0 0 82 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="5" x2="82" y2="5" stroke="#1a3a2a" stroke-width="2"/>
+      <line x1="8" y1="16" x2="74" y2="16" stroke="#1a3a2a" stroke-width="2"/>
+      <line x1="17" y1="27" x2="65" y2="27" stroke="#1a3a2a" stroke-width="2"/>
+    </svg>
+    <svg style="top:50%;left:41%;width:52px;height:52px;opacity:.14;transform:rotate(10deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="#2d6a4f" stroke-width="2.5"/>
+    </svg>
+  </div>
+  <div class="section-inner">
+    <p class="section-label">Why Strata Resources</p>
+    <h2 class="section-title">The specialist the industry was missing.</h2>
+    <p class="section-sub">The material exists. The demand exists. Both sides come through us and we make it happen.</p>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon">📋</div>
+        <h4>Your compliance is covered</h4>
+        <p>You receive the completed Materials Management Plan before the first load. No permit needed, no EA process to manage. The documentation is our job, not yours.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">💷</div>
+        <h4>Cheaper than what you're buying now</h4>
+        <p>Certified by-product fill at £5–12/t versus £18–35/t for primary aggregate. Significant saving on bulk fill volumes without compromising on spec or compliance.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">📞</div>
+        <h4>One call. I handle the rest.</h4>
+        <p>You tell me what you need. I source the material, confirm the classification, coordinate haulage and deliver the documentation. No platform, no self-serve, no admin burden on your side.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">📍</div>
+        <h4>UK-wide coverage</h4>
+        <p>We place material across England and Wales. Whether you're in the Midlands, the South East or further afield, we find a source that works for your location and timescale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ── -->
+<section id="contact">
+  <div class="bg-shapes">
+    <svg style="top:-62px;right:-42px;width:285px;height:285px;opacity:.10;transform:rotate(18deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,3 97,26 97,74 50,97 3,74 3,26" stroke="white" stroke-width="1.5"/>
+    </svg>
+    <svg style="bottom:-30px;left:-16px;width:140px;height:140px;opacity:.10;transform:rotate(-4deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 95,88 5,88" stroke="white" stroke-width="1.8"/>
+    </svg>
+    <svg style="top:42%;left:47%;width:60px;height:60px;opacity:.13;transform:rotate(12deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="white" stroke-width="2"/>
+    </svg>
+    <svg style="bottom:17%;right:4%;width:88px;height:34px;opacity:.14" viewBox="0 0 88 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="5" x2="88" y2="5" stroke="#52b788" stroke-width="2"/>
+      <line x1="8" y1="17" x2="80" y2="17" stroke="#52b788" stroke-width="2"/>
+      <line x1="18" y1="29" x2="70" y2="29" stroke="#52b788" stroke-width="2"/>
+    </svg>
+    <svg style="top:22%;left:4%;width:72px;height:72px;opacity:.11;transform:rotate(-10deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,3 97,26 97,74 50,97 3,74 3,26" stroke="white" stroke-width="2"/>
+    </svg>
+  </div>
+  <div class="section-inner">
+    <p class="section-label">Get in touch</p>
+    <h2 class="section-title">Talk directly with me.</h2>
+    <p class="section-sub">No switchboard, no contact form. Call or email and I'll come back to you the same day.</p>
+    <div class="contact-personal">
+      <div class="contact-photo-block">
+        <div class="contact-photo-placeholder">Photo</div>
+        <div class="contact-personal-text">
+          <strong>David Foster</strong>
+          <span>Director, Strata Resources Ltd</span>
+          <span style="font-size:.8rem;color:rgba(255,255,255,.5);margin-top:4px;display:block">UK bulk fill broker</span>
+        </div>
+      </div>
+      <div class="contact-details-block">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div class="contact-detail-text">
+            <strong>Phone</strong>
+            <a href="tel:+447342672689">+44 7342 672689</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉</div>
+          <div class="contact-detail-text">
+            <strong>Email</strong>
+            <a href="mailto:hello@strataresources.co.uk">hello@strataresources.co.uk</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div class="contact-detail-text">
+            <strong>Coverage</strong>
+            <span>England &amp; Wales</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-prompt">
+        <strong style="color:rgba(255,255,255,.85);display:block;font-size:.88rem;margin-bottom:10px">Useful to have ready</strong>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px">
+          <li style="font-size:.82rem;color:rgba(255,255,255,.6);padding-left:18px;position:relative">
+            <span style="position:absolute;left:0;color:var(--green-light)">·</span>Rough volume and site location
+          </li>
+          <li style="font-size:.82rem;color:rgba(255,255,255,.6);padding-left:18px;position:relative">
+            <span style="position:absolute;left:0;color:var(--green-light)">·</span>Fill spec if known
+          </li>
+          <li style="font-size:.82rem;color:rgba(255,255,255,.6);padding-left:18px;position:relative">
+            <span style="position:absolute;left:0;color:var(--green-light)">·</span>Your timescale
+          </li>
+        </ul>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:14px;line-height:1.6">Not sure if the by-product route works for your site? Call anyway. I'll tell you straight.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="bg-shapes">
+    <svg style="top:-32px;right:7%;width:118px;height:118px;opacity:.09;transform:rotate(15deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,3 97,26 97,74 50,97 3,74 3,26" stroke="white" stroke-width="1.5"/>
+    </svg>
+    <svg style="bottom:-10px;left:22%;width:48px;height:48px;opacity:.07;transform:rotate(8deg)" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,4 96,50 50,96 4,50" stroke="white" stroke-width="2"/>
+    </svg>
+  </div>
+  <a href="#" class="logo">Strata Resources <span>Ltd</span></a>
+  <p>Registered in England &amp; Wales &nbsp;·&nbsp; Co. No. [XXXXXXXX] &nbsp;·&nbsp; Fully insured &nbsp;·&nbsp; hello@strataresources.co.uk</p>
+</footer>
+
+<!-- ── WhatsApp bubble ── -->
+<a href="https://wa.me/447342672689" target="_blank" rel="noopener" class="whatsapp-bubble" title="Message on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+</body>
+</html>
